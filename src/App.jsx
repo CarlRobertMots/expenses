@@ -1,9 +1,10 @@
 import React from 'react'
+import ExpenseItem from './assets/ExpenseItem.jsx'
 
 const App = () => {
   return (
-    <div>
-      
+    <div className='App'>
+      <ExpenseItem />
     </div>
   )
 }
