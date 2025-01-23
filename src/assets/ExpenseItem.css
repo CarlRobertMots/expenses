@@ -1,7 +1,22 @@
 .expense-item {
     width: 100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 25);
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
+.expense-item__description {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.expense-item__price {
+    display: inline-block;
+    background-color: blueviolet;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
 }
