@@ -1,6 +1,7 @@
 import React from 'react'
 import ExpenseItem from './assets/ExpenseItem.jsx'
 import './App.css'
+import './assets/Expenses.css'
 
 const App = () => {
   const expenses = [
@@ -16,11 +17,14 @@ const App = () => {
   }
   ]
   return (
-    <div className='App'>
-      <ExpenseItem data={expenses[0]}/>
-      <ExpenseItem data={expenses[1]}/>
+    <div className="App">
+      <div className="Expenses">
+        {expenses.map((expense, index) => (
+          <ExpenseItem key={index} data={expense} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default App
