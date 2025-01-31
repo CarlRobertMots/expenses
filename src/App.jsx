@@ -1,7 +1,7 @@
 import React from 'react'
-import ExpenseItem from './assets/ExpenseItem.jsx'
+import ExpenseItem from './assets/Expenses/ExpenseItem.jsx'
 import './App.css'
-import './assets/Expenses.css'
+import './assets/Expenses/Expenses.css'
 
 const App = () => {
   const expenses = [
@@ -20,7 +20,7 @@ const App = () => {
     <div className="App">
       <div className="Expenses">
         {expenses.map((expense, index) => (
-          <ExpenseItem key={index} data={expense} />
+          <ExpenseItem key={index} expenseData={expense} />
         ))}
       </div>
     </div>
