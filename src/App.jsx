@@ -1,7 +1,6 @@
-import React from 'react'
-import ExpenseItem from './assets/Expenses/ExpenseItem.jsx'
 import './App.css'
-import './assets/Expenses/Expenses.css'
+import Expenses from './assets/Expenses/Expenses'
+import NewExpense from './assets/NewExpense/NewExpense'
 
 const App = () => {
   const expenses = [
@@ -16,13 +15,16 @@ const App = () => {
     price: 80.99
   }
   ]
+
+const addExpenseHandler = (expense) => {
+  console.log('In App.js')
+  console.log(expense)
+}
+
   return (
     <div className="App">
-      <div className="Expenses">
-        {expenses.map((expense, index) => (
-          <ExpenseItem key={index} expenseData={expense} />
-        ))}
-      </div>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
+      <Expenses expenses={expenses} />
     </div>
   );
 };
